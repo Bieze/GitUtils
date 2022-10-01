@@ -11,5 +11,5 @@ for FILE in os.listdir(SRC_DIR):
         subprocess.call(["g++", "-static", "-L./src/include/boost_1_80_0", f"{SRC_DIR}/{FILE}", "-o", f"{BUILD_DIR}/{NEWNAME}.exe"])
     elif FILE.endswith('.cpp') and BUILD_OS == "Linux":
         NEWNAME=FILE[:-4]
-        subprocess.call(["g++", "-static", f"{SRC_DIR}/{FILE}", "-o", f"{BUILD_DIR}/{NEWNAME}"])
+        subprocess.call(["g++", "-std=c++17","-static", f"{SRC_DIR}/{FILE}", "-o", f"{BUILD_DIR}/{NEWNAME}"])
         subprocess.call(["chmod", "+x", f"{BUILD_DIR}/{NEWNAME}"])
