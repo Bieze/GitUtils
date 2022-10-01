@@ -1,6 +1,9 @@
 #include <iostream>
 #include <io.h>
 #include "global.h"
+#ifdef linux
+#include <unistd.h>
+#endif
 
 using namespace std;
 

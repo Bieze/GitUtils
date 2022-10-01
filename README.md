@@ -9,8 +9,8 @@ Mingw-w64. (BASICALLY A COPY OF THE GITOLITE CREATE REPO THING.)
 
 ```bash
 # Ubuntu
-apt-get install mingw-w64
 apt-get install libboost-all-dev
+apt-get install g++
 ```
 
 ## Usage
