@@ -4,9 +4,7 @@
 #include <io.h>
 #include <string>
 #include <filesystem>
-#ifdef linux
-#include <unistd.h>
-#endif
+
 
 using namespace std;
 

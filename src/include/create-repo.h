@@ -1,8 +1,9 @@
 #include <iostream>
 #include <io.h>
 #include "global.h"
-#ifdef linux
+#ifdef __linux__
 #include <unistd.h>
+#include <sys/stat.h>
 #endif
 
 using namespace std;
@@ -21,7 +22,11 @@ int createRepo(string repo) {
     chdir(location);
 
     const char *dirname = repo.c_str();
-    mkdir(dirname);
+    #ifdef __linux__
+        mkdir(dirname, 777);
+    #else
+        mkdir(dirname);
+    #endif
     chdir(dirname);
     system("git init --bare");
   
