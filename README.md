@@ -13,6 +13,8 @@ apt-get install libboost-all-dev
 apt-get install g++
 
 make compile
+make install
+# Next you need to add ~/.gitutils/bin to PATH.
 ```
 
 ## Usage
