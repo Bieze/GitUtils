@@ -19,16 +19,8 @@ bool cmdOptionExists(char ** begin, char ** end, const string& option) {
 
 int main(int argc, char * argv[]) {
 
-    if (cmdOptionExists(argv, argv+argc, "")) {
-        cout << "GitUtils v0.1.4 usage:\n";
-        cout << "   help                         Print this help message.\n";
-        cout << "   create  [repository]         Create a new repository.\n";
-        cout << "   delete  [repository]         Delete a repository.\n";
-
-    }
-
     if (cmdOptionExists(argv, argv+argc, "help")) {
-        cout << "GitUtils v0.1.4 usage:\n";
+        cout << "GitUtils v0.1.5 usage:\n";
         cout << "   help                         Print this help message.\n";
         cout << "   create  [repository]         Create a new repository.\n";
         cout << "   delete  [repository]         Delete a repository.\n";

@@ -8,19 +8,15 @@
 
 using namespace std;
 
-
-
 int deleteRepo(string repo) {
 
     struct stat info;
-    string fulldir = REPOSITORY_LOCATION + repo;
-
-    const char *dirname = fulldir.c_str();
-    cout << dirname;
-    if (stat(dirname, &info) != 0) {
+    string dirname = REPOSITORY_LOCATION + repo;
+    if (stat(dirname.c_str(), &info) != 0) {
         cout << "Repository does not exist or name is not spelled correctly.";
     } else if( info.st_mode & S_IFDIR ) {
-        filesystem::remove_all(dirname);
+        filesystem::remove_all(dirname.c_str());
+        cout << "Deleted repository" << dirname << endl;
     }
 
     return 0;
