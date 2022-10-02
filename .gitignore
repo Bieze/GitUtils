@@ -3,6 +3,8 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode
 
 ### VisualStudioCode ###
+repositories
+build/
 boost_1_80_0
 .vscode/
 .vscode/*

@@ -24,10 +24,11 @@ int createRepo(string repo) {
     const char *dirname = repo.c_str();
     #ifdef __linux__
         mkdir(dirname, 777);
+        chdir(dirname);
     #else
         mkdir(dirname);
+        chdir(dirname);
     #endif
-    chdir(dirname);
     system("git init --bare");
   
 
