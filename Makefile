@@ -5,6 +5,7 @@ UNAME := $(shell uname)
 
 ifeq ($(UNAME), Linux)
 	OUT_FILE = program
+
 endif
 ifeq ($(UNAME), windows32)
 	OUT_FILE = program.exe

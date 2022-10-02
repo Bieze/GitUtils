@@ -16,7 +16,7 @@ int deleteRepo(string repo) {
         cout << "Repository does not exist or name is not spelled correctly.";
     } else if( info.st_mode & S_IFDIR ) {
         filesystem::remove_all(dirname.c_str());
-        cout << "Deleted repository" << dirname << endl;
+        cout << "Deleted repository " << dirname << endl;
     }
 
     return 0;

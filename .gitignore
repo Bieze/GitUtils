@@ -4,7 +4,7 @@
 
 ### VisualStudioCode ###
 repositories
-build/
+build/program.exe
 boost_1_80_0
 .vscode/
 .vscode/*

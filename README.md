@@ -12,7 +12,7 @@ Mingw-w64. (BASICALLY A COPY OF THE GITOLITE CREATE REPO THING.)
 apt-get install libboost-all-dev
 apt-get install g++
 
-make install
+make compile
 ```
 
 ## Usage
