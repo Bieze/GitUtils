@@ -23,8 +23,8 @@ install:
 	git clone https://abdulhani.com/git/GitUtils.git ~/.gitutils
 	cd ~/.gitutils
 	make compile
-	mkdir bin
-	mv build/$(OUT_FILE) bin/$(FILE)
+	mkdir ~/.gitutils/bin
+	mv build/$(OUT_FILE) ~/.gitutils/bin/$(FILE)
 	@echo "You need to add ~/.gitutils/bin to PATH if you haven't already."
 	@echo "The config file for gitutils is at ~/.gitutils/src/include/global.h, edit it and recompile the program using `make update-config` and then `make install` to apply changes."
 
