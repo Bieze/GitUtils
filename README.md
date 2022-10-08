@@ -4,17 +4,44 @@ GitUtils is a program written for making managing your git server easier
 
 ## Installation
 
-Use the package manager on your system to install 
-Mingw-w64. (BASICALLY A COPY OF THE GITOLITE CREATE REPO THING.)
+Use the package manager on your system to install g++.
 
 ```bash
-# Ubuntu
-apt-get install libboost-all-dev
+# Debian and derivatives
+apt-get update
 apt-get install g++
 
-make compile
+# Arch Linux and derivatives
+pacman -Syu
+pacman -S g++
+
+# Fedora and derivatives
+dnf update
+dnf install gcc-c++
+
+# To install
+make compile 
 make install
-# Next you need to add ~/.gitutils/bin to PATH.
+
+# To update configuration file
+cd ~/.gitutils/bin
+make update-config
+
+# To update the code
+git pull
+
+# See below on how to add to path.
+```
+
+## How to add to path.
+
+```bash
+# Fish
+fish_add_path ~/.gitutils/bin
+
+# Bash
+echo export PATH="$HOME/.gitutils/bin:$PATH" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Usage

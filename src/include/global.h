@@ -4,8 +4,9 @@
 
 /*
 REPOSITORY_LOCATION [string] : Where to create new repositories.
-Needs to always end with a /
+Leave blank if you want it to be the user directory.
+Needs to always end with a / EXCEPT if blank.
 */
-extern std::string REPOSITORY_LOCATION = "repositories/"; // . For current directory.
+extern std::string REPOSITORY_LOCATION = "repositories/"; 
 
 #endif
