@@ -1,9 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(GitUtils VERSION 0.2.0)
+project(GitUtils VERSION 2.0.0)
 
-
+# ============ BEGIN CONFIG ============ #
 set(REPOS_HOME "repositories/")
+set(BACKUP "true") # Set to `true` or `false`
+set(BACKUP_DIR "backups/")
+# ============  END CONFIG  ============ #
+
 
 execute_process(
     COMMAND git log -1 --format=%h

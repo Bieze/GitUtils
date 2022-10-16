@@ -1,6 +1,7 @@
 #include "config.h"
 #include <iostream>
 #include <cmds/createRepo.hpp>
+#include <cmds/deleteRepo.hpp>
 #include <boost/program_options.hpp>
 
 using namespace std;
@@ -41,7 +42,9 @@ int main(int argc, char *argv[]) {
                 project_hash << " C++ standard: " <<
                 __cplusplus << "\n";
         } else if (vm.count("create")) {
-            gitCreateRepo(vm["create"].as<std::string>());
+            gitCreateRepo(vm["create"].as<string>());
+        } else if (vm.count("delete")) {
+            removeRepo(vm["delete"].as<string>());
         }
     }
 
