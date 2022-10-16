@@ -1,0 +1,15 @@
+#define PROJECT_NAME "@PROJECT_NAME@"
+#define PROJECT_VER  "@PROJECT_VERSION@"
+#define PROJECT_VER_MAJOR "@PROJECT_VERSION_MAJOR@"
+#define PROJECT_VER_MINOR "@PROJECT_VERSION_MINOR@"
+#define PROJECT_VER_PATCH "@PROJECT_VERSION_PATCH@"
+
+
+#ifndef GLOBALS_H
+#define GLOBALS_H
+inline const char *GIT_HASH     = "@GIT_HASH@";
+inline const char *repohome     = "@REPOS_HOME@";
+inline const char *BACKUPS_DIR  = "@BACKUP_DIR@";
+inline const bool Backup        = @BACKUP@;
+
+#endif
