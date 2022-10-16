@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
                 project_hash << " C++ standard: " <<
                 __cplusplus << "\n";
         } else if (vm.count("create")) {
-            gitCreateRepo();
+            gitCreateRepo(vm["create"].as<std::string>());
         }
     }
 
